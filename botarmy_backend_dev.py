@@ -9,7 +9,6 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.chat_models import ChatOpenAI 
 from htmlTemplates import css, bot_template, user_template
 import os
-import tkinter as tk
 
 if 'train' not in st.session_state:
     st.session_state.train = False
