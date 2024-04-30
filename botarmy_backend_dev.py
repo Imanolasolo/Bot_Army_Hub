@@ -77,10 +77,11 @@ def homepage():
     st.markdown("BOT ARMY is a platform for creating Backend projects in various frameworks using LLMs (Large Language Models from PDFs and URLs) as engine.")
     st.markdown("With BOT ARMY, you can easily generate code snippets, project structures, and even interact with ChatGPT to get assistance in your development process.")
     st.markdown("Follow these steps to get started:")
-    st.success("1. Choose the type of BOT you want to generate.")
-    st.warning("2. Train the agent choosing the selector each time you start the bot")
-    st.success("3. Start creating your Backend project!")
-    st.success("4. After using the bot push 'Clear Conversation' on sidebar to clear the messages and work clearly")
+    st.warning("1. Insert your Openai API KEY in the sidebar when asked.")
+    st.success("2. Choose the type of BOT you want to generate.")
+    st.warning("3. Train the agent choosing the selector each time you start the bot")
+    st.success("4. Start creating your Backend project!")
+    st.success("5. After using the bot push 'Clear Conversation' on sidebar to clear the messages and work clearly")
     
 
 def django_page():
@@ -425,7 +426,8 @@ bot_type = st.sidebar.radio("Choose a BOT type",
 if bot_type == "Clear Conversation":
     st.write('<style> .css-12l95y4 { background-color: #FF5733; color: white; } </style>', unsafe_allow_html=True)
  # Add a text input widget in the sidebar to allow users to input the API key globally
-api_key = st.sidebar.text_input("Enter your OpenAI API key:")   
+api_key = st.sidebar.text_input("Enter your OpenAI API key:")
+st.sidebar.markdown("[Do you want to get your OpenAI API key?](https://gptforwork.com/help/knowledge-base/create-openai-api-key)")
 # Mostrar la página de inicio
 homepage()
 
