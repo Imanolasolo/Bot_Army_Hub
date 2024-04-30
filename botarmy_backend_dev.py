@@ -35,7 +35,7 @@ def get_vector_store(text_chunks):
     if not text_chunks:
         st.warning("Please upload the textual PDF file - this is PDF files of image")
         return None
-    embeddings = OpenAIEmbeddings(openai_api_key=st.secrets["OPEN_AI_APIKEY"])
+    embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
@@ -424,7 +424,8 @@ bot_type = st.sidebar.radio("Choose a BOT type",
 
 if bot_type == "Clear Conversation":
     st.write('<style> .css-12l95y4 { background-color: #FF5733; color: white; } </style>', unsafe_allow_html=True)
-    
+ # Add a text input widget in the sidebar to allow users to input the API key globally
+api_key = st.sidebar.text_input("Enter your OpenAI API key:")   
 # Mostrar la página de inicio
 homepage()
 
