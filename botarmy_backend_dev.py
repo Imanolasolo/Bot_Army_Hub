@@ -428,6 +428,7 @@ if bot_type == "Clear Conversation":
  # Add a text input widget in the sidebar to allow users to input the API key globally
 api_key = st.sidebar.text_input("Enter your OpenAI API key:")
 st.sidebar.markdown("[Do you want to get your OpenAI API key?](https://gptforwork.com/help/knowledge-base/create-openai-api-key)")
+st.sidebar.markdown("[Interested in more bots or want a develop one? Just contact](https://imanol-asolo-ai-based-portfolio.streamlit.app/)")
 # Mostrar la página de inicio
 homepage()
 
