@@ -79,10 +79,11 @@ opcion = st.sidebar.selectbox('Interact with us', menu2)
 if opcion == 'Chat with us':
     st.write("You selected to chat with us")
     # Redireccionar al usuario a un enlace específico
-    st.markdown("[Go to chat](https://imanol-asolo-ai-chat.streamlit.app/)")
+    st.markdown("[Go to chat](https://botarmy-chat.streamlit.app/)")
 
 if opcion == 'Want to be a Bot reseller?':
     st.write("You selected to how to resell our bots")
     
     st.success("Are you ready to take your entrepreneurial journey to the next level? Do you have a passion for cutting-edge technology and a drive to succeed in the ever-evolving world of digital innovation? Then look no further, because BOTARMY-HUB is offering you the opportunity of a lifetime!")
     st.info("As a BOTARMY-HUB Bot Reseller, you'll gain access to industry-leading chatbot technology that empowers businesses to enhance their customer experience, streamline their operations, and drive growth like never before. With our customizable chatbot solutions tailored to meet the unique needs of every client, you'll have the power to transform businesses across industries and make a real impact in the digital landscape.")
+    st.markdown("[Go to BOTARMY-HUB reseller page](https://botarmy-reseller-info.streamlit.app/)")
