@@ -76,36 +76,21 @@ def main():
     with col1:
         st.image('Botarmy_logo.png', width=100)
     with col2:
-        st.header("BOTARMY_HUB - Chat handler :robot_face:")
+        st.header("BOTARMY_HUB - FAQ :robot_face:")
 
     with st.sidebar:
         
-        st.subheader(":books: Instructions")
-        with st.expander("Expand instructions"):
-            # Lista de instrucciones
-            instrucciones = [
-                "1. Choose betwen using BOTARMY_HUB bot or an agent created by yourself.",
-                "2. Push Train agent button.",
-                "3. Start talking with agent at your own."
-            ]
-
-            # Renderizar la lista de instrucciones
-            for instruccion in instrucciones:
-                st.markdown(instruccion)
-
-      
-
-        st.subheader(":file_folder: PDF File's Section")
+        st.subheader(":file_folder: BOTARMY-HUB FAQ")
         
-        use_sample_pdf = st.checkbox("Talk with BOTARMY_HUB Bot")
-        if use_sample_pdf:
-            sample_pdf_path = os.path.join(os.getcwd(), "botarmy_info.pdf")
-            st.session_state.pdf_files = [sample_pdf_path]
-        else:
-            st.session_state.pdf_files = st.file_uploader("Talk with your own trained agents", type=['pdf'], accept_multiple_files=True)
+        #use_sample_pdf = st.checkbox("Talk with BOTARMY_HUB Bot")
+        #if use_sample_pdf:
+        sample_pdf_path = os.path.join(os.getcwd(), "botarmy_info.pdf")
+        st.session_state.pdf_files = [sample_pdf_path]
+        #else:
+            #st.session_state.pdf_files = st.file_uploader("Talk with your own trained agents", type=['pdf'], accept_multiple_files=True)
 
         #st.session_state.api_key = st.text_input("Enter your OpenAI API key:")
-        train = st.button("Train the Agent")
+        train = st.button("Talk wit Botarmy_HUB")
         if train:
             with st.spinner("Processing"):
                 # get the text from PDFs
