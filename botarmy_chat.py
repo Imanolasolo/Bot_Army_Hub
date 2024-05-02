@@ -90,7 +90,7 @@ def main():
             #st.session_state.pdf_files = st.file_uploader("Talk with your own trained agents", type=['pdf'], accept_multiple_files=True)
 
         #st.session_state.api_key = st.text_input("Enter your OpenAI API key:")
-        train = st.button("Talk wit Botarmy_HUB")
+        train = st.button("Talk with Botarmy_HUB")
         if train:
             with st.spinner("Processing"):
                 # get the text from PDFs
@@ -119,10 +119,10 @@ def main():
                 st.markdown(instruccion)
 
     if not st.session_state.train:
-        st.warning("First Train the Agent")
+        st.warning("First push the button to talk on sidebar, please.")
 
     if st.session_state.train:
-        st.write("<h5><br>Ask anything from your documents, doesn´t matter the language I am multi-idiomatic !:</h5>", unsafe_allow_html=True)
+        st.write("<h5><br>Ask anything about ARMYBOT_HUB, doesn´t matter the language I am multi-idiomatic !:</h5>", unsafe_allow_html=True)
         user_question = st.text_input(label="", placeholder="Enter something...")
         if user_question:
             handle_userInput(user_question)
