@@ -122,7 +122,7 @@ def main():
         st.warning("First push the button to talk on sidebar, please.")
 
     if st.session_state.train:
-        st.write("<h5><br>Ask anything about ARMYBOT_HUB, doesn´t matter the language I am multi-idiomatic !:</h5>", unsafe_allow_html=True)
+        st.write("<h5><br>Ask anything about BOTARMY_HUB, doesn´t matter the language I am multi-idiomatic !:</h5>", unsafe_allow_html=True)
         user_question = st.text_input(label="", placeholder="Enter something...")
         if user_question:
             handle_userInput(user_question)
